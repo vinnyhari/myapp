@@ -9,7 +9,7 @@ node{
 	  sh 'mv target/myweb*.war target/newapp.war'
    }
    stage('SonarQube Analysis') {
-	        def mvnHome =  tool name: 'maven3', type: 'maven3'
+	 
 	        withSonarQubeEnv('sonar') { 
 	          sh "${mvnHome}/bin/mvn sonar:sonar"
 	        }
